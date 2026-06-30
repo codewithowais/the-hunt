@@ -28,6 +28,8 @@ What's next?  User runs `claude` in terminal, logs in with Max account. Then AI 
 - AI web search source (opt-in `useWebSearch`): runClaude now takes opts incl. `allowedTools:"WebSearch"`; fetchAiWebSearch asks claude (web) for public postings → JSON array, strips LinkedIn/Indeed. Graceful [] if not signed in (verified: returns board results, ~8s, no error). NOTE: full web-search path UNVERIFIED end-to-end (claude not logged in).
 - Country list expanded to ~63 (was 24) across all continents. Server `aliasesFor()` name-fallback → any country filters by its own name even without curated aliases; added regions for new ones. Verified: Nigeria/South Korea/Mexico/Netherlands filter correctly.
 - minScore filter default 0 → **90** (show only strong matches; slider lowers). Deliberately did NOT add LinkedIn/Indeed browser scraping (ban-risk product rule) — used AI web search instead.
+- AI company/career-page discovery now **ON by default** (useWebSearch=true). fetchAiWebSearch prompt reworked: discover companies hiring in chosen city/country → read their career pages → return DIRECT apply links. Wizard label is dynamic ("Find companies hiring in {place} and search their career pages (AI)"). Still needs claude login (graceful [] otherwise) — UNVERIFIED end-to-end.
+- Every job now carries a **`source`** reference (Remotive/RemoteOK/Arbeitnow/"Careers · slug"/web domain). UI shows "via {source}" on cards + "Reference: …" in drawer, plus a prominent **Apply** link (card) / button (drawer) to the direct URL. Verified via seeded job.
 
 ## Bug fixed: blank page / "Cannot use import statement outside a module"
 - Root cause: index.html loaded `@babel/standalone` **unpinned** → drifted to **8.0.3**. Babel 8's
