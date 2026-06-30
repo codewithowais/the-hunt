@@ -159,7 +159,8 @@ function JobTracker() {
     const q = query.toLowerCase();
     return jobs
       .filter((j) => (statusFilter === "All" ? true : j.status === statusFilter))
-      .filter((j) => (j.score ?? 0) >= minScore)
+      // Min score only hides *scored* low matches; not-yet-scored jobs always show.
+      .filter((j) => j.score == null || j.score >= minScore)
       .filter((j) => !q || (j.title + " " + j.company).toLowerCase().includes(q))
       .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
   }, [jobs, statusFilter, minScore, query]);
