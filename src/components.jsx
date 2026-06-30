@@ -153,9 +153,9 @@ function HuntWizard({ defaultKeywords, defaultCountry, hasResume, onClose, onRun
 
       <div className="mt-4">
         <span className="text-xs font-medium text-slate-500">Where to look</span>
-        <label className="mt-1 flex items-center gap-2 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 cursor-pointer">
-          <input type="checkbox" checked={useRemoteBoards} onChange={(e) => setUseRemoteBoards(e.target.checked)} className="accent-teal-600" />
-          Remote job boards (Remotive + RemoteOK + Arbeitnow) — no setup needed
+        <label className="mt-1 flex items-start gap-2 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 cursor-pointer">
+          <input type="checkbox" checked={useRemoteBoards} onChange={(e) => setUseRemoteBoards(e.target.checked)} className="accent-teal-600 mt-0.5" />
+          <span>Public job boards <span className="text-slate-400">— Remotive, RemoteOK, Arbeitnow, The Muse &amp; Jobicy. No login, no setup.</span></span>
         </label>
         <label className="mt-2 flex items-start gap-2 text-sm text-slate-700 bg-teal-50/60 border border-teal-200 rounded-lg px-3 py-2 cursor-pointer">
           <input type="checkbox" checked={useWebSearch} onChange={(e) => setUseWebSearch(e.target.checked)} className="accent-teal-600 mt-0.5" />

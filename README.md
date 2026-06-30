@@ -62,4 +62,5 @@ Found a job on **LinkedIn or Indeed**? Use **Add job** to paste it — it gets t
 
 - `index.html` — a small shell that loads the `src/` modules (via CDN React + Babel, no build step).
 - `src/` — the app (React): `core.js` (helpers, API, prompts), `icons.jsx`, `components.jsx`, `app.jsx`.
-- `server.js` — the local server: routes AI through Claude Code, searches the job sources, and saves your data to disk.
+- `job-sources.js` — the no-login job finder: pulls from public boards (Remotive, RemoteOK, Arbeitnow, The Muse, Jobicy) and company career pages (Greenhouse/Lever/Ashby). No account or API key needed.
+- `server.js` — the local server: serves the app, runs the job finder, routes AI through Claude Code, and saves your data to disk.
