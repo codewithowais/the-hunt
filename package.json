@@ -1,0 +1,12 @@
+{
+  "name": "the-hunt",
+  "version": "1.0.0",
+  "description": "Personal AI job-search command center — runs locally on your Claude Max subscription via Claude Code.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

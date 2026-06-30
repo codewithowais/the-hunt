@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>The Hunt — Job Tracker</title>
+  <!-- Inline favicon so the browser doesn't 404 on /favicon.ico -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E%F0%9F%8E%AF%3C/text%3E%3C/svg%3E" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <!-- Pinned to 7.x: Babel 8's React preset defaults to the automatic JSX runtime, which emits
+       `import "react/jsx-runtime"` — that breaks this bundler-less, UMD-React setup. 7.x defaults to classic. -->
+  <script src="https://unpkg.com/@babel/standalone@7.29.7/babel.min.js"></script>
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://unpkg.com/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+  <noscript>The Hunt needs JavaScript enabled.</noscript>
+
+  <!-- The app is split into modules, compiled in the browser by Babel and loaded in
+       dependency order. They share one global scope (no bundler), so order matters:
+       core (constants/utils/api) → icons → components → app (root + render).
+       Open via the server (http://localhost:8787), not by double-clicking this file. -->
+  <script type="text/babel" src="src/core.js" data-presets="react"></script>
+  <script type="text/babel" src="src/icons.jsx" data-presets="react"></script>
+  <script type="text/babel" src="src/components.jsx" data-presets="react"></script>
+  <script type="text/babel" src="src/app.jsx" data-presets="react"></script>
+</body>
+</html>
