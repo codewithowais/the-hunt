@@ -234,6 +234,37 @@ const REGION_ALIASES = {
   "Thailand": ["asia", "apac", "south ?east asia", "sea"],
   "Vietnam": ["asia", "apac", "south ?east asia", "sea"],
   "Philippines": ["asia", "apac", "south ?east asia", "sea"],
+  // Americas (added)
+  "Uruguay": ["americas", "latam", "south america", "latin america"],
+  "Panama": ["americas", "latam", "central america", "latin america"],
+  "Ecuador": ["americas", "latam", "south america", "latin america"],
+  "Dominican Republic": ["americas", "latam", "caribbean", "latin america"],
+  "Guatemala": ["americas", "latam", "central america", "latin america"],
+  // Europe (added)
+  "Luxembourg": ["europe", "emea", "eu", "benelux"],
+  "Iceland": ["europe", "emea", "nordics?", "scandinavia"],
+  "Slovakia": ["europe", "emea", "eu", "cee"],
+  "Bulgaria": ["europe", "emea", "eu", "cee"],
+  "Croatia": ["europe", "emea", "eu", "balkans?"],
+  "Serbia": ["europe", "emea", "balkans?"],
+  "Slovenia": ["europe", "emea", "eu", "balkans?"],
+  "Cyprus": ["europe", "emea", "eu"],
+  "Malta": ["europe", "emea", "eu"],
+  // Middle East & Africa (added)
+  "Jordan": ["middle east", "mena", "emea"],
+  "Lebanon": ["middle east", "mena", "emea"],
+  "Tunisia": ["mena", "africa", "emea"],
+  "Algeria": ["mena", "africa", "emea"],
+  "Ghana": ["africa", "emea"],
+  "Ethiopia": ["africa", "emea"],
+  "Tanzania": ["africa", "emea"],
+  "Uganda": ["africa", "emea"],
+  "Rwanda": ["africa", "emea"],
+  // Asia & Pacific (added)
+  "Nepal": ["asia", "south asia", "apac"],
+  "Taiwan": ["asia", "apac", "east asia"],
+  "Cambodia": ["asia", "apac", "south ?east asia", "sea"],
+  "Kazakhstan": ["asia", "apac", "central asia"],
 };
 function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 function makePattern(alts) {

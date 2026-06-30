@@ -118,8 +118,8 @@ function HuntWizard({ defaultKeywords, defaultCountry, hasResume, onClose, onRun
           </select>
         </div>
         <div>
-          <label htmlFor="hunt-city" className="text-xs font-medium text-slate-500">City <span className="text-slate-400 font-normal">(optional)</span></label>
-          <input id="hunt-city" list="hunt-city-list" value={city} onChange={(e) => setCity(e.target.value)} placeholder={citySuggestions[0] ? "e.g. " + citySuggestions[0] : "e.g. Riyadh"} className={"mt-1 " + INPUT_CLS} />
+          <label htmlFor="hunt-city" className="text-xs font-medium text-slate-500">City <span className="text-slate-400 font-normal">(pick or type)</span></label>
+          <input id="hunt-city" list="hunt-city-list" value={city} onChange={(e) => setCity(e.target.value)} autoComplete="off" placeholder={citySuggestions[0] ? citySuggestions[0] + " · or type any" : "Type any city"} className={"mt-1 " + INPUT_CLS} />
           <datalist id="hunt-city-list">{citySuggestions.map((c) => <option key={c} value={c} />)}</datalist>
         </div>
       </div>
